@@ -1,6 +1,0 @@
-[submodule "alacritty/catppuccin"]
-	path = alacritty/catppuccin
-	url = https://github.com/catppuccin/alacritty.git
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/NvChad/NvChad.git
