@@ -17,9 +17,23 @@ eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Open buffer line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
+
 # Aliaces
 alias ls="eza --color=always --long --git --icons --no-time --no-user --no-permissions"
 alias cat="bat"
+alias k="kubectl"
+alias kctl="kubectl"
+alias kns="kubens"
+alias kctx="kubectx"
+alias py="python3"
+alias python="python3"
+alias gcc="gcc-14"
+alias g++="g++-14"
+# alias docker="podman"
 
 # fzf
 eval "$(fzf --zsh)"
@@ -69,3 +83,15 @@ eval "$(zoxide init --cmd cd zsh)"
 # tmux
 # tmux attach || tmux new -s default
 # clear
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/shashisu/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# AsyncAPI CLI Autocomplete
+
+ASYNCAPI_AC_ZSH_SETUP_PATH=/Users/shashisu/Library/Caches/@asyncapi/cli/autocomplete/zsh_setup && test -f $ASYNCAPI_AC_ZSH_SETUP_PATH && source $ASYNCAPI_AC_ZSH_SETUP_PATH; # asyncapi autocomplete setup
+
+
+export PATH="$HOME/.local/bin:$PATH"

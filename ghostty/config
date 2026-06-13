@@ -1,0 +1,8 @@
+font-family = hack nerd font mono
+theme = Catppuccin Mocha
+window-padding-x = 10
+font-size = 16
+macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
+title = "👻👻👻" 
+
